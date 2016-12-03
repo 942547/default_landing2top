@@ -1,0 +1,27 @@
+.sf-menu
+	// margin: 0
+	// padding: 0
+	list-style: none
+	*
+		margin: 0
+		padding: 0
+		list-style: none
+	li
+		position: relative
+	ul
+		position: absolute
+		display: none
+		top: 100%
+		left: 0
+		z-index: 99
+	> li
+		float: left
+	li
+		&:hover > ul, &.sfHover > ul
+			display: block
+	a
+		display: block
+		position: relative
+	ul ul
+		top: 0
+		left: 100%
