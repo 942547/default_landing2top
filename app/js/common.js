@@ -72,4 +72,7 @@ $(function() {
 		mainClass: 'my-mfp-slide-bottom'
 	});
 
+	// TO TOP BUTTON
+	
+
 });
