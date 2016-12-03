@@ -2,6 +2,7 @@
 @import "sass/vars"
 @import "sass/reset"
 @import "sass/base"
+@import "sass/size"
 @import "libs/superfish/css/superfish.css"
 @import "libs/superfish/css/megafish.css"
 @import "libs/mmenu/css/jquery.mmenu.all.css"
@@ -10,9 +11,6 @@
 @import "libs/FontAwesome/css/font-awesome.css"
 
 // BASE
-.section
-	padding: 120px 0 80px
-
 .nav
 	position: fixed
 	top: 0
@@ -49,12 +47,15 @@
 	li
 		white-space: normal
 		position: static
+		ul
+			font-size: 18px
 		a
 			color: inherit
 	> li
 		> ul
 			width: 220px
 			left: auto
+			font-size: 18px
 			li
 				.sf-with-ul::after
 					font-family: "FontAwesome"
@@ -70,12 +71,15 @@
 	font-size: 1.1em
 
 .toggle-mnu
-	width: 28px
-	height: 28px
+	background-color: #ddd
+	border-radius: 3px
+	height: 36px
 	margin-top: 14px
+	padding: 8px 3px 3px
 	position: fixed
 	right: 15px
 	top: 0
+	width: 36px
 	z-index: 2
 
 	span:after, span:before 
