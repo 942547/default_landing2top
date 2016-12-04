@@ -62,7 +62,7 @@ $(function() {
 	// fade in #back-top
 	$(function () {
 		$(window).scroll(function () {
-			if ($(this).scrollTop() > 200) {
+			if ($(this).scrollTop() > 600) {
 				$('#back-top').fadeIn();
 			} else {
 				$('#back-top').fadeOut();
