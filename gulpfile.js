@@ -54,7 +54,9 @@ gulp.task('libs', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/superfish/js/superfish.min.js',
+		'app/libs/mmenu/js/hammer.min.js',
 		'app/libs/mmenu/js/jquery.mmenu.all.min.js',
+		'app/libs/mmenu/js/jquery.mmenu.dragopen.min.js',
 		'app/libs/swiper/js/swiper.jquery.js',
 		'app/libs/popup/js/jquery.magnific-popup.min.js'
 		])
