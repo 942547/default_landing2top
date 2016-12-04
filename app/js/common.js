@@ -9,6 +9,17 @@ $(function() {
 	$("#mobile-menu").find("*").attr("style", "");
 	$("#mobile-menu").children("menu").removeClass("sf-menu").removeClass("menu_theme")
 	.parent().mmenu({
+		counters: true,
+		navbars: [
+		{
+			"position": "bottom",
+			"content": [
+			"<a class='fa fa-envelope' href='#/'></a>",
+			"<a class='fa fa-twitter' href='#/'></a>",
+			"<a class='fa fa-facebook' href='#/'></a>"
+			]
+		}
+		],
 		extensions : [ 'widescreen', 'theme-white', 'effect-menu-slide', 'pagedim-black' ],
 		navbar: {
 			title: "Меню"
