@@ -14,9 +14,9 @@ $(function() {
 		{
 			"position": "bottom",
 			"content": [
-			"<a class='fa fa-envelope' href='#/'></a>",
-			"<a class='fa fa-twitter' href='#/'></a>",
-			"<a class='fa fa-facebook' href='#/'></a>"
+			"<a class='fa fa-phone' aria-hidden='true' href='#/'></a>",
+			"<a class='fa fa-envelope' aria-hidden='true' href='#/'></a>",
+			"<a class='fa fa-vk' aria-hidden='true' href='#/'></a>",
 			]
 		}
 		],
