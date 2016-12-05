@@ -177,6 +177,20 @@ h1, h2, h3, .h1, .h2, .h3
 		font-size: 2em
 		&:hover
 			background-color: lighten($accent, 5%)
+	&::after
+		content: ''
+		opacity: 0
+	&:hover
+		&::after
+			content: attr(data-title)
+			transition: all 0.2s ease-in-out
+			position: absolute
+			z-index: 1
+			top: -30px
+			right: 0
+			text-align: center
+			width: 80px
+			opacity: 1
 
 // SWIPER
 .swiper-container
