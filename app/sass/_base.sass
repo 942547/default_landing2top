@@ -78,15 +78,19 @@ h1, h2, h3, .h1, .h2, .h3
 	width: auto
 	margin-bottom: 0
 	li
+		transition: ease-out 0.1s
+		background-color: $liBgColor
 		white-space: normal
 		position: static
-		&.sfHover
-			background-color: $accent
 		ul
 			font-size: 18px
 		a
 			color: inherit
 			border: none
+		&:focus,
+		&:hover,
+		&.sfHover
+			background-color: $liBgColor_hover
 	> li
 		> ul
 			width: 220px
@@ -98,6 +102,12 @@ h1, h2, h3, .h1, .h2, .h3
 					content: ''
 					right: 1em
 					position: absolute
+	ul
+		li
+			background-color: $ulBgColor
+		ul
+			li
+				background-color: $ulBgColor
 
 #mobile-menu
 	z-index: 3
