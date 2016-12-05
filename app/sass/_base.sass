@@ -124,7 +124,7 @@ h1, h2, h3, .h1, .h2, .h3
 
 .toggle-mnu
 	background-color: $accent
-	// border-radius: 3px
+	border-radius: 3px
 	height: 36px
 	margin-top: 14px
 	padding: 8px 3px 3px
@@ -143,14 +143,15 @@ h1, h2, h3, .h1, .h2, .h3
 	span:after
 		top: 18px
 
-	span 
+	span
 		position: relative
 		display: block
 
 	span, span:after, span:before
 		width: 100%
 		height: 2px
-		background-color: #222
+		border-radius: 2px
+		background-color: $liColor_hover
 		transition: all 0.3s
 		backface-visibility: hidden
 		// border-radius: 2px
@@ -171,7 +172,7 @@ h1, h2, h3, .h1, .h2, .h3
 	right: 20px
 	a
 		background-color: $accent
-		color: inherit
+		color: $liColor_hover
 		display: block
 		padding: 0 18px
 		line-height: 1em
@@ -229,11 +230,11 @@ h1, h2, h3, .h1, .h2, .h3
 	width: 15px
 	height: 15px
 	opacity: .4
-	border: 2px solid #fff
-	background-color: inherit
+	border: 2px solid $bulletBorderColor
+	background-color: $bulletBgColor
 
 .swiper-pagination-bullet-active
-	background-color: $accent
+	background-color: $bulletBgColor_active
 	opacity: 1
 
 .swiper-scrollbar
