@@ -54,6 +54,9 @@ h1, h2, h3, .h1, .h2, .h3
 .posr
 	position: relative
 
+.ta
+	text-align: left
+
 .df
 	display: -webkit-flex
 	display: -moz-flex
@@ -171,6 +174,7 @@ h1, h2, h3, .h1, .h2, .h3
 	bottom: 60px
 	right: 20px
 	a
+		border-radius: $toTopBorderRadius
 		background-color: $accent
 		color: $liColor_hover
 		display: block
@@ -182,20 +186,34 @@ h1, h2, h3, .h1, .h2, .h3
 		font-size: 2em
 		&:hover
 			background-color: lighten($accent, 5%)
-	&::after
+	&:after,
+	&:before
 		content: ''
+		background-color: $tipBgColor
 		opacity: 0
+		position: absolute
+		border-radius: $tipBorderRadius
+	&:after
+		color: $tipColor
+		right: 0
+		text-align: center
+		top: -47px
+		width: 80px
+	&:before
+		display: block
+		height: 18px
+		width: 18px
+		right: 15px
+		top: -30px
+		transform: rotate(45deg)
 	&:hover
+		&::after,
+		&:before
+			opacity: 1
+			z-index: 1
 		&::after
 			content: attr(data-title)
-			transition: all 0.2s ease-in-out
-			position: absolute
-			z-index: 1
-			top: -30px
-			right: 0
-			text-align: center
-			width: 80px
-			opacity: 1
+
 
 // SWIPER
 .swiper-container
@@ -225,6 +243,11 @@ h1, h2, h3, .h1, .h2, .h3
 		opacity: .5
 	>*
 		z-index: 0
+
+.swiper-slide__content
+	padding: 0 10px
+	text-align: center
+	max-width: 600px
 
 .swiper-pagination-bullet
 	width: 15px
@@ -327,6 +350,29 @@ h1, h2, h3, .h1, .h2, .h3
 	&.mfp-removing.mfp-bg
 		opacity: 0
 
+
+// BUTTON
+.btn
+	background-color: $btnBgColor
+	border-radius: $btnBorderRadius
+	border: $btnBorder
+	color: $btnColor
+	cursor: pointer
+	display: inline-block
+	padding: 0.4em 0.8em
+	text-decoration: none
+	text-shadow: none
+	&:active,
+	&:focus,
+	&:hover
+		color: inherit
+		text-decoration: none
+		border-color: $btnBorderColor_hover
+	&:focus,
+	&:hover
+		background-color: $btnBgColor_hover
+	&:active
+		background-color: $btnBgColor_active
 
 //Media Queries
 @media (min-width: 960px)

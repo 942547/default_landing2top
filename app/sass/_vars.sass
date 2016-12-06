@@ -3,8 +3,21 @@
 $default-font: "roboto", sans-serif
 $accent: #8158a0 // Акцентный цвет
 
+
+// Настройки кнопок
+$btnColor: #fff // Цвет текста в кнопке, в обычном состоянии
+
+$btnBgColor: $accent // Цвет заливки кнопки, в обычном состоянии
+$btnBgColor_hover: lighten($accent, 5%) // Цвет заливки кнопки, при наведении
+$btnBgColor_active: darken($accent, 5%) // Цвет заливки кнопки, при активности
+
+$btnBorder: 2px solid #fff
+$btnBorderColor_hover: inherit
+$btnBorderRadius: 3px
+
+
 // Настройки SF-MENU
-$liColor: #222 // Цвет текста в меню, обычном состоянии
+$liColor: #222 // Цвет текста в меню, в обычном состоянии
 $liColor_hover: #fff // Цвет текста в меню, при наведении и активности
 
 $liBgColor: inherit // Цвет заливки кнопки меню, в обычном состоянии
@@ -12,6 +25,16 @@ $liBgColor_hover: $accent // Цвет заливки кнопки меню, пр
 $liBgColor_active: $accent // Цвет заливки кнопки меню, при активности
 
 $ulBgColor: #eee // Цвет заливки подменю и мега меню
+
+
+// Настройки TO TOP
+$toTopBorderRadius: $btnBorderRadius
+
+
+// Настройки подсказки
+$tipColor: $liColor_hover // Цвет текста подсказки
+$tipBgColor: $accent // Цвет заливки подсказки
+$tipBorderRadius: $btnBorderRadius
 
 
 // Настройки SWIPER
