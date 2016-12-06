@@ -43,6 +43,10 @@ h1, h2, h3, .h1, .h2, .h3
 	font-family: "roboto"
 	font-weight: bold
 
+a[href^="tel:"]
+	color: inherit
+	white-space: nowrap
+
 // NAV
 .nav
 	position: fixed
@@ -96,6 +100,7 @@ h1, h2, h3, .h1, .h2, .h3
 		&.sfHover
 			background-color: $liBgColor_hover
 			color: $liColor_hover
+			border-color: $liBgColor_hover
 	> li
 		> ul
 			width: 220px

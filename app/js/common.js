@@ -1,5 +1,6 @@
 $(function() {
 
+	// Инициализация SF-MENU
 	$(".sf-menu").superfish({
 		delay: 200,
 		speed: "fast",
@@ -14,9 +15,9 @@ $(function() {
 		{
 			"position": "bottom",
 			"content": [
-			"<a class='fa fa-phone' aria-hidden='true' href='#/'></a>",
-			"<a class='fa fa-envelope' aria-hidden='true' href='#/'></a>",
-			"<a class='fa fa-vk' aria-hidden='true' href='#/'></a>",
+			"<a class='fa fa-phone' aria-hidden='true' href='tel:+74722569991'></a>",
+			// "<a class='fa fa-envelope' aria-hidden='true' href='mailto:info@trofey31.ru'></a>",
+			"<a class='fa fa-vk' target='_blank' aria-hidden='true' href='https://vk.com/club40894945'></a>",
 			]
 		}
 		],
@@ -61,7 +62,7 @@ $(function() {
 		var id  = $(this).attr('href'),
 
 		// находим высоту, на которой расположен блок
-		top = $(id).offset().top-56;
+		top = $(id).offset().top-67;
 
 		// анимируем переход к блоку, время: 800 мс
 		$('body,html').animate({scrollTop: top}, 800);
@@ -104,6 +105,23 @@ $(function() {
 		removalDelay: 300,
 		mainClass: 'my-mfp-slide-bottom'
 	});
+
+	// Выделение активного меню
+	jQuery(window).scroll(function(){
+		var $sections = $('.section, .header, .camp__section ');
+		$sections.each(function(i,el){
+			var top  = $(el).offset().top-100;
+			var bottom = top +$(el).height();
+			var scroll = $(window).scrollTop();
+			var id = $(el).attr('id');
+			if( scroll > top && scroll < bottom){
+				$('li.active').removeClass('active');
+				$('a[href="#'+id+'"]').parent('li').addClass('active');
+
+			}
+		})
+	});
+
 
 
 });
